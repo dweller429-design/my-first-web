@@ -3,32 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ishmael Mapalo Luboya's student page about web programming, hobbies and learning.">
-    <title>My First Web Page | Chama Stanley Mutati</title>
+    <meta name="description" content="The student portfolio of Chama Stanley Mutati, a Computer Science student learning web technologies.">
+    <meta name="theme-color" content="#173e36">
+    <title>Chama Stanley Mutati | Student Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
 </head>
 <body>
     <header class="site-header">
         <div class="header-inner">
             <p class="eyebrow">ICT251 · Web Technologies</p>
-            <h1>Learning to build<br><span>for the web.</span></h1>
-            <p class="student-info">Chama Stanley Mutati <span aria-hidden="true">·</span> S/N: 202507803</p>
+            <h1>Chama Stanley<br><span>Mutati.</span></h1>
+            <p class="student-info">Computer Science student at Mulungushi University <span aria-hidden="true">·</span> S/N: 202507803</p>
+            <p class="hero-intro">I’m learning to turn ideas into useful, thoughtfully designed digital experiences.</p>
+            <a class="button-link" href="#projects">View My Projects <span aria-hidden="true">↓</span></a>
         </div>
     </header>
 
     <nav class="site-nav" aria-label="Main navigation">
         <div class="nav-inner">
-            <a href="#about">About</a>
-            <a href="#hobbies">Hobbies</a>
-            <a href="#learning">Learning plan</a>
-            <a href="#photos">Photos</a>
-            <a href="#media">Media</a>
+            <a href="#about">About Me</a>
+            <a href="#hobbies">My Hobbies</a>
+            <a href="#learning">Learning Plan</a>
+            <a href="#projects">Skills &amp; Projects</a>
+            <a href="#photos">My Photos</a>
+            <a href="#media">My Media</a>
             <a href="#contact">Contact</a>
-            <a class="external-link" href="https://developer.mozilla.org/en-US/docs/Learn_web_development"
-               target="_blank" rel="noopener noreferrer">MDN ↗</a>
         </div>
     </nav>
 
@@ -74,7 +77,7 @@
                     <table>
                         <caption>Weekly web learning plan</caption>
                         <thead>
-                            <tr><th>Day</th><th>Topic</th><th>Practice task</th></tr>
+                            <tr><th scope="col">Day</th><th scope="col">Topic</th><th scope="col">Practice task</th></tr>
                         </thead>
                         <tbody>
                             <tr><td>Monday</td><td>HTML</td><td>Create a structured web page.</td></tr>
@@ -86,37 +89,81 @@
             </div>
         </section>
 
+        <section id="projects" class="content-section">
+            <div class="section-label">04 / Learning by building</div>
+            <div class="section-content">
+                <h2>Skills &amp; projects</h2>
+                <p>Small examples of the web skills I am learning and practising.</p>
+                <div class="project-tools">
+                    <label for="project-search">Filter skills and projects</label>
+                    <div class="search-controls">
+                        <input id="project-search" type="search" placeholder="Try HTML or responsive" autocomplete="off">
+                        <button id="project-reset" class="secondary-button" type="button">Show all</button>
+                    </div>
+                    <p id="project-status" class="project-status" role="status" aria-live="polite"></p>
+                </div>
+                <div class="project-grid">
+                    <article class="project-card" data-search="html semantic structure portfolio">
+                        <p class="card-number">01</p>
+                        <h3>Semantic HTML</h3>
+                        <p>Organising a page with meaningful headings, sections, navigation and accessible labels.</p>
+                        <button class="details-toggle" type="button" aria-expanded="false" aria-controls="project-details-html">Show details</button>
+                        <p id="project-details-html" class="project-details" hidden>I used semantic page regions and linked navigation so each part of this portfolio is easy to find.</p>
+                    </article>
+                    <article class="project-card" data-search="css responsive design layout">
+                        <p class="card-number">02</p>
+                        <h3>Responsive CSS</h3>
+                        <p>Using flexible layouts, a consistent colour palette and media queries for different screens.</p>
+                        <button class="details-toggle" type="button" aria-expanded="false" aria-controls="project-details-css">Show details</button>
+                        <p id="project-details-css" class="project-details" hidden>I practised Grid, flexible media and small-screen styles to keep the portfolio readable on phones.</p>
+                    </article>
+                    <article class="project-card" data-search="javascript forms dom validation">
+                        <p class="card-number">03</p>
+                        <h3>JavaScript interactions</h3>
+                        <p>Responding to visitor actions with form validation and updates to page content.</p>
+                        <button class="details-toggle" type="button" aria-expanded="false" aria-controls="project-details-js">Show details</button>
+                        <p id="project-details-js" class="project-details" hidden>The contact preview, project filter and gallery controls use event listeners and DOM updates.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
         <section id="photos" class="content-section">
-            <div class="section-label">04 / Personal collection</div>
+            <div class="section-label">05 / Personal collection</div>
             <div class="section-content">
                 <h2>My photos</h2>
-                <div class="gallery">
-                    <figure>
-                        <img src="WhatsApp Image 2026-09-28 at 8.08.06 PM.jpeg" alt="My first selected personal photo">
+                <div class="gallery" aria-live="polite">
+                    <figure class="gallery-slide">
+                        <img src="images/WhatsApp Image 2026-09-28 at 8.08.06 PM.jpeg" alt="Personal photo from my collection, first image">
                         <figcaption>My first selected photo.</figcaption>
                     </figure>
-                    <figure>
-                        <img src="WhatsApp Image 2026-09-28 at 8.08.03 PM.jpeg" alt="My second selected personal photo">
+                    <figure class="gallery-slide" hidden>
+                        <img src="images/WhatsApp Image 2026-09-28 at 8.08.03 PM.jpeg" alt="Personal photo from my collection, second image">
                         <figcaption>My second selected photo.</figcaption>
                     </figure>
-                    <figure>
-                        <img src="WhatsApp Image 2026-09-28 at 7.59.02 PM.jpeg" alt="My third selected personal photo">
+                    <figure class="gallery-slide" hidden>
+                        <img src="images/WhatsApp Image 2026-09-28 at 7.59.02 PM.jpeg" alt="Personal photo from my collection, third image">
                         <figcaption>My third selected photo.</figcaption>
                     </figure>
                 </div>
-                <p class="note">Replace these image files with photos you are allowed to share.</p>
+                <div class="gallery-controls" aria-label="Photo viewer controls">
+                    <button id="gallery-previous" class="secondary-button" type="button">Previous photo</button>
+                    <p id="gallery-status" class="gallery-status" aria-live="polite">Photo 1 of 3</p>
+                    <button id="gallery-next" class="secondary-button" type="button">Next photo</button>
+                </div>
+                <p class="note">Use the photo controls to browse the collection.</p>
             </div>
         </section>
 
         <section id="media" class="content-section">
-            <div class="section-label">05 / Listen and watch</div>
+            <div class="section-label">06 / Listen and watch</div>
             <div class="section-content">
                 <h2>My media</h2>
                 <div class="media-grid">
                     <div>
                         <h3>My introduction video</h3>
                         <video controls preload="metadata">
-                            <source src="video/WhatsApp Video 2026-09-28 at 10.15.51 PM.mp4" type="video/mp4">
+                            <source src="videos/WhatsApp Video 2026-09-28 at 10.15.51 PM.mp4" type="video/mp4">
                             Your browser does not support the video element.
                         </video>
                         <p>In this video, I introduce myself, my Computer Science programme and one web skill I hope to learn.</p>
@@ -124,7 +171,7 @@
                     <div>
                         <h3>My audio clip</h3>
                         <audio controls preload="metadata">
-                            <source src="2026_09_28_22_40_39.m4a" type="audio/mp4">
+                            <source src="videos/2026_09_28_22_40_39.m4a" type="audio/mp4">
                             Your browser does not support the audio element.
                         </audio>
                         <p>This recording describes one of my hobbies or my reason for studying Web Technologies.</p>
@@ -134,41 +181,39 @@
         </section>
 
         <section id="contact" class="content-section">
-            <div class="section-label">06 / Get in touch</div>
+            <div class="section-label">07 / Get in touch</div>
             <div class="section-content">
                 <h2>Contact</h2>
-                <p>This form is a browser demonstration only and does not send data.</p>
-                <form id="contact-form">
+                <p class="form-notice">Browser demonstration only — no message is sent.</p>
+                <form id="contact-form" novalidate>
                     <label for="name">Name</label>
-                    <input type="text" id="name" name="name" autocomplete="name" required>
+                    <input type="text" id="name" name="name" autocomplete="name" aria-describedby="form-status" required>
 
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" autocomplete="email" required>
-
-                    <label for="topic">Topic</label>
-                    <input type="text" id="topic" name="topic">
+                    <input type="email" id="email" name="email" autocomplete="email" aria-describedby="form-status" required>
 
                     <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <textarea id="message" name="message" rows="5" aria-describedby="form-status" required></textarea>
 
-                    <button type="submit">Submit message <span aria-hidden="true">→</span></button>
+                    <button type="submit">Validate and preview <span aria-hidden="true">→</span></button>
                     <p id="form-status" role="status" aria-live="polite"></p>
+                    <section id="form-preview" class="form-preview" aria-labelledby="preview-heading" aria-live="polite" hidden>
+                        <h3 id="preview-heading">Validated local preview</h3>
+                        <p id="preview-confirmation"></p>
+                        <dl>
+                            <dt>Name</dt><dd id="preview-name"></dd>
+                            <dt>Email</dt><dd id="preview-email"></dd>
+                            <dt>Message</dt><dd id="preview-message"></dd>
+                        </dl>
+                    </section>
                 </form>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>© 2026 Ishmael Mapalo Luboya <span aria-hidden="true">·</span> ICT251 Web Technologies</p>
+        <p>© 2026 Chama Stanley Mutati <span aria-hidden="true">·</span> ICT251 Web Technologies</p>
+        <p><a href="https://github.com/dweller429-design/my-first-web" target="_blank" rel="noopener noreferrer">View Source on GitHub</a></p>
     </footer>
-
-    <script>
-        document.querySelector("#contact-form").addEventListener("submit", (event) => {
-            event.preventDefault();
-            document.querySelector("#form-status").textContent =
-                "Thanks. This demonstration form does not send your message.";
-            event.currentTarget.reset();
-        });
-    </script>
 </body>
 </html>
